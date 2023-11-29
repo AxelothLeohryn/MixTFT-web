@@ -5,7 +5,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 14px;
+    font-size: 1.1em;
     font-family: league;
     font-weight: bolder;
 }
@@ -43,8 +43,8 @@ article {
     margin: 5px 15px;
     padding: 10px;
     border: 1px solid #fffe66;
-    border-radius: 5px;
-    height: 35px;
+    border-radius: 4px;
+    height: 8vh;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -63,6 +63,9 @@ h4 {
 
 progress:hover {
     background-color: rgb(114, 114, 114);
+}
+input {
+    color: red;
 }
 progress[value] {
     --w: 300px;
