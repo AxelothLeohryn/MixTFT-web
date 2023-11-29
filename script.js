@@ -32,7 +32,7 @@ tracks.forEach((track, index) => {
   });
   track.addEventListener("volumechange", () => {
     if (tracks[index].muted || tracks[index].volume === 0) {
-      articles[index].style.backgroundColor = "lightgray";
+      articles[index].style.backgroundColor = "#091224";
     } else {
       articles[index].style.backgroundColor = "#082c3e";
     }
