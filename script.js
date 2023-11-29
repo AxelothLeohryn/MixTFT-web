@@ -5,9 +5,48 @@ const progressBars = document.querySelectorAll("progress");
 const articles = document.querySelectorAll("article");
 const icons = document.querySelectorAll("img");
 const check = document.getElementById("late-game-check");
+const loadingSection = document.getElementById("loading");
 
 const early = document.getElementById("early-tracks");
 const late = document.getElementById("late-tracks");
+
+// Trigger loading of the audio files
+function loadAudios() {
+  let loadedCount = 0; // count of audios that have loaded
+  tracks.forEach((track, index) => {
+    // Listen for the 'canplaythrough' event which means the audio is ready to play
+    track.addEventListener('canplaythrough', function() {
+      console.log(`Audio ${index + 1} can play through.`);
+      loadedCount++;
+      if (loadedCount === tracks.length) {
+        console.log('All audio files can play through.');
+        loadingSection.style.display = 'none';
+      }
+    }, { once: true });
+
+    // Listen for errors in loading the audio
+    track.addEventListener('error', function() {
+      console.error(`Error loading audio ${index + 1}.`);
+    }, { once: true });
+
+    // Attempt to load the audio file
+    track.load();
+  });
+}
+
+// Call loadAudios on page load
+window.addEventListener('load', loadAudios);
+
+function allAudiosLoaded() {
+  const allLoaded = Array.from(tracks).every((track) => track.readyState >= 4);
+  if (allLoaded) {
+    loadingSection.style.display = "none";
+  }
+}
+// Add event listeners to each track for the 'canplaythrough' event
+tracks.forEach((track) => {
+  track.addEventListener("canplaythrough", allAudiosLoaded, { once: true });
+});
 
 check.addEventListener("change", (event) => {
   tracks.forEach((track) => {
@@ -15,7 +54,7 @@ check.addEventListener("change", (event) => {
     track.volume = 0;
     play.innerHTML = "Play All";
   });
-  
+
   event.preventDefault();
   if (check.checked) {
     // console.log("Checkbox is checked..");
