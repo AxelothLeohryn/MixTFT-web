@@ -4,6 +4,27 @@ const play = document.getElementById("play-all-button");
 const progressBars = document.querySelectorAll("progress");
 const articles = document.querySelectorAll("article");
 const icons = document.querySelectorAll("img");
+const check = document.getElementById("late-game-check");
+
+const early = document.getElementById("early-tracks");
+const late = document.getElementById("late-tracks");
+
+check.addEventListener("change", (event) => {
+  tracks.forEach((track) => {
+    track.pause();
+    play.innerHTML = "Play All";
+  });
+  event.preventDefault();
+  if (check.checked) {
+    console.log("Checkbox is checked..");
+    early.style.display = "none";
+    late.style.display = "flex";
+  } else {
+    console.log("Checkbox is not checked..");
+    early.style.display = "flex";
+    late.style.display = "none";
+  }
+});
 
 volumeControls.forEach((control, i) => {
   control.addEventListener("input", () => {
@@ -18,11 +39,11 @@ play.addEventListener("click", (event) => {
   tracks.forEach((track) => {
     if (track.paused) {
       track.play();
-      play.innerHTML = "Pause All"
+      play.innerHTML = "Pause All";
       //   console.log(track.currentTime);
     } else {
       track.pause();
-      play.innerHTML = "Play All"
+      play.innerHTML = "Play All";
     }
   });
 });

@@ -111,7 +111,13 @@ section {
     align-items: center;
     justify-content: center;
 }
-
+#late-tracks {
+    width: 100%;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
 article {
     margin: 5px 15px;
     padding: 10px;
