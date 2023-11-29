@@ -9,7 +9,7 @@
 * {
     margin: 0;
     padding: 0;
-    font-size: 1.1em;
+    font-size: 1em;
     font-family: league;
     font-weight: bolder;
 }
@@ -28,9 +28,10 @@ main {
             font-size: 50px; 
 }
 #play-all-button {
-    padding: 10px;
+    padding: 15px;
+    border-radius: 5px;
     margin: 5px;
-    width: 25vw;
+    width: 60vw;
     position: sticky;
     bottom: 5px;
     background-color: #4c4c58;;
@@ -58,8 +59,8 @@ article {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
-    gap: 20px;
-    width: 60%;
+    gap: 5px;
+    width: 90%;
     background-color: #0A1428;
     color: white;
 }
@@ -67,11 +68,10 @@ article:hover {
     filter: brightness(0.9);
 }
 h4 {
-    width: 350px;
+    width: 25%;
 }
 img {
-    width: 50px;
-    margin: 0px 20px;
+    width: 25px;
     border: 2px solid #c59647;
     border-radius: 200px;
 }
@@ -80,9 +80,10 @@ progress:hover {
 }
 input {
     color: red;
+    width: 25%;
 }
 progress[value] {
-    --w: 300px;
+    --w: 25%;
     /* the width*/
     --color:
         /* the progress color */
@@ -109,3 +110,7 @@ progress[value]::-webkit-progress-value {
     border-radius: 10em;
     background: var(--color);
 }
+
+@media screen and (width > 768px) {
+    
+  }
