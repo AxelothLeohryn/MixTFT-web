@@ -33,7 +33,7 @@ tracks.forEach((track, index) => {
     if (tracks[index].muted || tracks[index].volume === 0) {
       articles[index].style.backgroundColor = "lightgray";
     } else {
-      articles[index].style.backgroundColor = "lightblue";
+      articles[index].style.backgroundColor = "#082c3e";
     }
   });
 });

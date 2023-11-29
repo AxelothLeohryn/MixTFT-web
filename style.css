@@ -2,6 +2,10 @@
     font-family: league;
     src: url(assets/BeaufortForLoL-OTF/BeaufortforLOL-Bold.otf);
   }
+  @font-face {
+    font-family: league-title;
+    src: url(assets/BeaufortForLoL-OTF/BeaufortforLOL-Heavy.otf);
+  }
 * {
     margin: 0;
     padding: 0;
@@ -17,6 +21,11 @@ main {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+}
+#title {
+    font-family: league;
+    color: white; 
+            font-size: 50px; 
 }
 #play-all-button {
     padding: 10px;
@@ -51,7 +60,7 @@ article {
     justify-content: space-between;
     gap: 20px;
     width: 60%;
-    background-color: #031826;
+    background-color: #0A1428;
     color: white;
 }
 article:hover {
@@ -60,7 +69,11 @@ article:hover {
 h4 {
     width: 100px;
 }
-
+img {
+    width: 30px;
+    border: 2px solid #c59647;
+    border-radius: 200px;
+}
 progress:hover {
     background-color: rgb(114, 114, 114);
 }
