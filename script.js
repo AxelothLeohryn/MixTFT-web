@@ -2,9 +2,13 @@ const tracks = document.querySelectorAll("audio");
 const volumeControls = document.querySelectorAll(".volume-control");
 const play = document.getElementById("play-all-button");
 const progressBars = document.querySelectorAll("progress");
+const articles = document.querySelectorAll("article");
 
 volumeControls.forEach((control, i) => {
   control.addEventListener("input", () => {
+    if (tracks[i].muted) {
+      tracks[i].muted = false;
+    }
     tracks[i].volume = control.value;
   });
 });
@@ -25,6 +29,13 @@ tracks.forEach((track, index) => {
     const progress = (track.currentTime / track.duration) * 100;
     progressBars[index].value = progress;
   });
+  track.addEventListener("volumechange", () => {
+    if (tracks[index].muted || tracks[index].volume === 0) {
+      articles[index].style.backgroundColor = "lightgray";
+    } else {
+      articles[index].style.backgroundColor = "lightblue";
+    }
+  });
 });
 
 progressBars.forEach((progressBar, i) => {
@@ -35,7 +46,7 @@ progressBars.forEach((progressBar, i) => {
     console.log(bar);
     const percent = (event.clientX - bar.left) / bar.width;
     console.log(percent);
-    const newTime = Math.floor(tracks[i].duration * percent);
+    const newTime = Math.round(tracks[i].duration * percent);
     console.log(newTime);
 
     //Apply new time
@@ -43,6 +54,4 @@ progressBars.forEach((progressBar, i) => {
       track.currentTime = newTime;
     });
   });
-//   progressBar.addEventListener()
 });
-

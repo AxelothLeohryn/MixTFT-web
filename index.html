@@ -1,35 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>MIXTFT</title>
 </head>
+
 <body>
     <header>
 
     </header>
     <main>
+        <button id="play-all-button">Play All</button>
         <section #music-tracks>
-            <article #track>
-                <h4>Pentakill</h4>
-                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="1">
-                <audio id="audio-pentakill" src="./assets/audio/pentakill_late.mp3"></audio>
-                <progress id="progress1" value="0" max="100"></progress>
+            <article>
+                <h4>8bit Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-8bit-late-drums" src="./assets/audio/8bit_late_drums.ogg"></audio>
+                <progress id="progress-8bit-late-drums" value="0" max="100"></progress>
             </article>
-            <article #track>
-                <h4>Jhin</h4>
-                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="1">
-                <audio id="audio-pentakill" src="./assets/audio/jhin_late.mp3"></audio>
-                <progress id="progress2" value="0" max="100"></progress>
+
+            <article>
+                <h4>8bit Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-8bit-late-main" src="./assets/audio/8bit_late_main.ogg"></audio>
+                <progress id="progress-8bit-late-main" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>Country Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-country-late-drums" src="./assets/audio/country_late_drums.ogg"></audio>
+                <progress id="progress-country-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Country Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-country-late-main" src="./assets/audio/country_late_main.ogg"></audio>
+                <progress id="progress-country-late-main" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>Disco Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-disco-late-drums" src="./assets/audio/disco_late_drums.ogg"></audio>
+                <progress id="progress-disco-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Disco Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-disco-late-main" src="./assets/audio/disco_late_main.ogg"></audio>
+                <progress id="progress-disco-late-main" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>EDM Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-edm-late-drums" src="./assets/audio/edm_late_drums.ogg"></audio>
+                <progress id="progress-edm-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>EDM Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-edm-late-main" src="./assets/audio/edm_late_main.ogg"></audio>
+                <progress id="progress-edm-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Emo Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-emo-late-drums" src="./assets/audio/emo_late_drums.ogg"></audio>
+                <progress id="progress-emo-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Emo Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-emo-late-main" src="./assets/audio/emo_late_main.ogg"></audio>
+                <progress id="progress-emo-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Heartsteel Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-heartsteel-late-drums" src="./assets/audio/heartsteel_late_drums.ogg"></audio>
+                <progress id="progress-heartsteel-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Heartsteel Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-heartsteel-late-main" src="./assets/audio/heartsteel_late_main.ogg"></audio>
+                <progress id="progress-heartsteel-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Heartsteel Late Secondary</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-heartsteel-late-secondary"
+                    src="./assets/audio/heartsteel_late_secondary.ogg"></audio>
+                <progress id="progress-heartsteel-late-secondary" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Hyperpop Late</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-hyperpop-late" src="./assets/audio/hyperpop_late.ogg"></audio>
+                <progress id="progress-hyperpop-late" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Hyperpop Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-hyperpop-late-drums" src="./assets/audio/hyperpop_late_drums.ogg"></audio>
+                <progress id="progress-hyperpop-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Jazz Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-jazz-late-main" src="./assets/audio/jazz_late_main.ogg"></audio>
+                <progress id="progress-jazz-late-main" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>KDA Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-kda-late-drums" src="./assets/audio/kda_late_drums.ogg"></audio>
+                <progress id="progress-kda-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>KDA Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-kda-late-main" src="./assets/audio/kda_late_main.ogg"></audio>
+                <progress id="progress-kda-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>KDA Late Secondary</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-kda-late-secondary" src="./assets/audio/kda_late_secondary.ogg"></audio>
+                <progress id="progress-kda-late-secondary" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>Maestro Late</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-maestro-late" src="./assets/audio/maestro_late.ogg"></audio>
+                <progress id="progress-maestro-late" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Pentakill Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-pentakill-late-drums" src="./assets/audio/pentakill_late_drums.ogg"></audio>
+                <progress id="progress-pentakill-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Pentakill Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-pentakill-late-main" src="./assets/audio/pentakill_late_main.ogg"></audio>
+                <progress id="progress-pentakill-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Pentakill Late Secondary</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-pentakill-late-secondary"
+                    src="./assets/audio/pentakill_late_secondary.ogg"></audio>
+                <progress id="progress-pentakill-late-secondary" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Piano Late</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-piano-late" src="./assets/audio/piano_late.ogg"></audio>
+                <progress id="progress-piano-late" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Punk Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-punk-late-drums" src="./assets/audio/punk_late_drums.ogg"></audio>
+                <progress id="progress-punk-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Punk Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-punk-late-main" src="./assets/audio/punk_late_main.ogg"></audio>
+                <progress id="progress-punk-late-main" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Truedamage Late Drums</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-truedamage-late-drums" src="./assets/audio/truedamage_late_drums.ogg"></audio>
+                <progress id="progress-truedamage-late-drums" value="0" max="100"></progress>
+            </article>
+
+            <article>
+                <h4>Truedamage Late Main</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-truedamage-late-main" src="./assets/audio/truedamage_late_main.ogg"></audio>
+                <progress id="progress-truedamage-late-main" value="0" max="100"></progress>
+            </article>
+            <article>
+                <h4>Truedamage Late Secondary</h4>
+                <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
+                <audio muted id="audio-truedamage-late-secondary" src="./assets/audio/truedamage_late_secondary.ogg"></audio>
+                <progress id="progress-truedamage-late-secondary" value="0" max="100"></progress>
             </article>
         </section>
-        <button id="play-all-button">Play All</button>
+
     </main>
     <footer>
 
     </footer>
     <script src="./script.js"></script>
 </body>
+
 </html>

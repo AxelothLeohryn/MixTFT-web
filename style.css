@@ -1,17 +1,42 @@
 * {
     margin: 0;
     padding: 0;
+    font-size: 0.8rem;
+    font-family: 'Comfortaa', sans-serif;
 }
 
-progress {}
+#play-all-button {
+    padding: 10px;
+    margin: 5px;
+    width: 95vw;
+}
+#play-all-button:hover {
+    background-color: rgb(139, 208, 225);
+    transform: scale(1.01);
+}
+article {
+    margin: 5px 15px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 20px;
+    height: 22px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: end;
+    gap: 20px;
+    max-width: 610px;
+    background-color: lightgray;
+}
+
 
 progress[value] {
-    --w: 200px;
+    --w: 300px;
     /* the width*/
     --color:
         /* the progress color */
         linear-gradient(90deg, #ff6161, #1ecd1e) 0/var(--w);
-    --background: lightgrey;
+    --background: rgb(146, 146, 146);
     /* the background color */
 
     -webkit-appearance: none;
