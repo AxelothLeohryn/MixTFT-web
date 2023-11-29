@@ -1,11 +1,13 @@
 @font-face {
     font-family: league;
     src: url(assets/BeaufortForLoL-OTF/BeaufortforLOL-Bold.otf);
-  }
-  @font-face {
+}
+
+@font-face {
     font-family: league-title;
     src: url(assets/BeaufortForLoL-OTF/BeaufortforLOL-Heavy.otf);
-  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -13,6 +15,7 @@
     font-family: league;
     font-weight: bolder;
 }
+
 main {
     background-image: url(https://images7.alphacoders.com/131/1319089.jpg);
     background-position: center;
@@ -22,11 +25,67 @@ main {
     align-items: center;
     justify-content: center;
 }
+
+.wraper {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+
+.label-text {
+    font-weight: bolder;
+    font-size: 1rem;
+    color: #A09B8C;
+}
+
+.switch-wrap {
+    cursor: pointer;
+    background: #0A1428;
+    padding: 7px;
+    width: 30px;
+    height: 15px;
+    border-radius: 33.5px;
+    border: 2px solid #785A28;
+}
+
+.switch-wrap input {
+    position: absolute;
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.switch {
+    height: 100%;
+    display: grid;
+    grid-template-columns: 0fr 1fr 1fr;
+    transition: 0.2s;
+}
+
+.switch::after {
+    content: "";
+    border-radius: 50%;
+    background: #ccc;
+    grid-column: 2;
+    transition: background 0.2s;
+}
+
+input:checked + .switch {
+    grid-template-columns: 1fr 1fr 0fr;
+  }
+  input:checked + .switch::after {
+    background-color: #C89B3C;
+  }
+
 #title {
     font-family: league;
-    color: white; 
-            font-size: 50px; 
+    color: white;
+    font-size: 50px;
 }
+
 #play-all-button {
     padding: 15px;
     border-radius: 5px;
@@ -34,14 +93,17 @@ main {
     width: 60vw;
     position: sticky;
     bottom: 5px;
-    background-color: #4c4c58;;
+    background-color: #4c4c58;
+    ;
     color: #ffffff;
-    border: 3px solid #3fb8ca ;
+    border: 3px solid #3fb8ca;
 }
+
 #play-all-button:hover {
     background-color: #656574;
     transform: scale(1.01);
 }
+
 section {
     width: 100%;
     display: flex;
@@ -49,6 +111,7 @@ section {
     align-items: center;
     justify-content: center;
 }
+
 article {
     margin: 5px 15px;
     padding: 10px;
@@ -64,24 +127,30 @@ article {
     background-color: #0A1428;
     color: white;
 }
+
 article:hover {
     filter: brightness(0.9);
 }
+
 h4 {
     width: 25%;
 }
+
 img {
     width: 25px;
     border: 2px solid #c59647;
     border-radius: 200px;
 }
+
 progress:hover {
     background-color: rgb(114, 114, 114);
 }
-input {
+
+input[type="range"] {
     color: red;
     width: 25%;
 }
+
 progress[value] {
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -107,17 +176,21 @@ progress[value]::-webkit-progress-value {
     * {
         font-size: 1.12em
     }
+
     article {
         height: 4vh;
     }
+
     img {
         width: 50px;
         margin: 20px;
     }
+
     input {
         width: 10%
     }
+
     progress[value] {
         width: 40%
     }
-  }
+}
