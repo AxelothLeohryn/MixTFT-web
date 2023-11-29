@@ -43,7 +43,7 @@ article {
     margin: 5px 15px;
     padding: 10px;
     border: 1px solid #fffe66;
-    border-radius: 20px;
+    border-radius: 5px;
     height: 35px;
     display: flex;
     flex-direction: row;
@@ -69,7 +69,7 @@ progress[value] {
     /* the width*/
     --color:
         /* the progress color */
-        linear-gradient(90deg, #ff6161, #1ecd1e) 0/var(--w);
+        linear-gradient(90deg, #005A82, #0AC8B9) 0/var(--w);
     --background: rgb(146, 146, 146);
     /* the background color */
 
