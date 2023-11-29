@@ -3,6 +3,7 @@ const volumeControls = document.querySelectorAll(".volume-control");
 const play = document.getElementById("play-all-button");
 const progressBars = document.querySelectorAll("progress");
 const articles = document.querySelectorAll("article");
+const icons = document.querySelectorAll("img");
 
 volumeControls.forEach((control, i) => {
   control.addEventListener("input", () => {
