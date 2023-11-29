@@ -140,7 +140,7 @@ input:checked + .switch {
 }
 
 section {
-    animation: 0.25s ease-in 0s 1 slideInFromLeft;
+    animation: 0.3s ease-in 0s 1 slideInFromRight;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -148,7 +148,7 @@ section {
     justify-content: center;
 }
 #late-tracks {
-    animation: 0.25s ease-in 0s 1 slideInFromRight;
+    animation: 0.3s ease-in 0s 1 slideInFromLeft;
     width: 100%;
     display: none;
     flex-direction: column;
