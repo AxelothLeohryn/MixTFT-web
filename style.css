@@ -43,11 +43,16 @@ article {
     width: 60%;
     background-color: lightgray;
 }
+article:hover {
+    filter: brightness(0.9);
+}
 h4 {
     width: 100px;
 }
 
-
+progress:hover {
+    background-color: rgb(114, 114, 114);
+}
 progress[value] {
     --w: 300px;
     /* the width*/
