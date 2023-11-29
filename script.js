@@ -18,9 +18,11 @@ play.addEventListener("click", (event) => {
   tracks.forEach((track) => {
     if (track.paused) {
       track.play();
+      play.innerHTML = "Pause All"
       //   console.log(track.currentTime);
     } else {
       track.pause();
+      play.innerHTML = "Play All"
     }
   });
 });
