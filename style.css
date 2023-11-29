@@ -83,22 +83,14 @@ input {
     width: 25%;
 }
 progress[value] {
-    --w: 25%;
-    /* the width*/
-    --color:
-        /* the progress color */
-        linear-gradient(90deg, #005A82, #0AC8B9) 0/var(--w);
-    --background: rgb(146, 146, 146);
-    /* the background color */
-
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
     border: none;
-    width: var(--w);
+    width: 25%;
     margin: 0 10px;
     border-radius: 10em;
-    background: var(--background);
+    background: rgb(146, 146, 146);
 }
 
 progress[value]::-webkit-progress-bar {
@@ -108,9 +100,24 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     border-radius: 10em;
-    background: var(--color);
+    background: linear-gradient(90deg, #005A82, #0AC8B9);
 }
 
 @media screen and (width > 768px) {
-    
+    * {
+        font-size: 1.12em
+    }
+    article {
+        height: 4vh;
+    }
+    img {
+        width: 50px;
+        margin: 20px;
+    }
+    input {
+        width: 10%
+    }
+    progress[value] {
+        width: 40%
+    }
   }
