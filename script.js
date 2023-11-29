@@ -12,8 +12,10 @@ const late = document.getElementById("late-tracks");
 check.addEventListener("change", (event) => {
   tracks.forEach((track) => {
     track.pause();
+    track.volume = 0;
     play.innerHTML = "Play All";
   });
+  
   event.preventDefault();
   if (check.checked) {
     // console.log("Checkbox is checked..");
