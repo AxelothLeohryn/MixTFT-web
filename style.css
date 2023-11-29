@@ -53,13 +53,13 @@ article {
     padding: 10px;
     border: 1px solid #fffe66;
     border-radius: 4px;
-    height: 6vh;
+    height: 5vh;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
     gap: 20px;
-    width: 50%;
+    width: 60%;
     background-color: #0A1428;
     color: white;
 }
@@ -67,10 +67,11 @@ article:hover {
     filter: brightness(0.9);
 }
 h4 {
-    width: 200px;
+    width: 350px;
 }
 img {
-    width: 30px;
+    width: 50px;
+    margin: 0px 20px;
     border: 2px solid #c59647;
     border-radius: 200px;
 }
