@@ -8,6 +8,41 @@
     src: url(assets/BeaufortForLoL-OTF/BeaufortforLOL-Heavy.otf);
 }
 
+@keyframes slideInFromRight {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromLeft {
+    0% {
+      transform: translateX(-100%);
+    }
+    100% {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes slideInFromBottom {
+    0% {
+      transform: translateY(100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideInFromTop {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
 * {
     margin: 0;
     padding: 0;
@@ -105,6 +140,7 @@ input:checked + .switch {
 }
 
 section {
+    animation: 0.25s ease-in 0s 1 slideInFromLeft;
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -112,6 +148,7 @@ section {
     justify-content: center;
 }
 #late-tracks {
+    animation: 0.25s ease-in 0s 1 slideInFromRight;
     width: 100%;
     display: none;
     flex-direction: column;

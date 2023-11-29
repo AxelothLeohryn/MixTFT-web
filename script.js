@@ -16,11 +16,11 @@ check.addEventListener("change", (event) => {
   });
   event.preventDefault();
   if (check.checked) {
-    console.log("Checkbox is checked..");
+    // console.log("Checkbox is checked..");
     early.style.display = "none";
     late.style.display = "flex";
   } else {
-    console.log("Checkbox is not checked..");
+    // console.log("Checkbox is not checked..");
     early.style.display = "flex";
     late.style.display = "none";
   }
@@ -67,11 +67,11 @@ progressBars.forEach((progressBar, i) => {
     event.preventDefault();
     //Calculate new time
     const bar = progressBar.getBoundingClientRect();
-    console.log(bar);
+    // console.log(bar);
     const percent = (event.clientX - bar.left) / bar.width;
-    console.log(percent);
+    // console.log(percent);
     const newTime = Math.round(tracks[i].duration * percent);
-    console.log(newTime);
+    // console.log(newTime);
 
     //Apply new time
     tracks.forEach((track) => {
