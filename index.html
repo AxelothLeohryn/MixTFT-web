@@ -5,6 +5,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <title>MIXTFT</title>
 </head>
 
@@ -13,8 +16,8 @@
 
     </header>
     <main>
-        <button id="play-all-button">Play All</button>
         <section #music-tracks>
+            
             <article>
                 <h4>8bit Late Drums</h4>
                 <input type="range" class="volume-control" min="0" max="1" step="0.01" value="0">
@@ -213,6 +216,7 @@
                 <audio muted id="audio-truedamage-late-secondary" src="./assets/audio/truedamage_late_secondary.ogg"></audio>
                 <progress id="progress-truedamage-late-secondary" value="0" max="100"></progress>
             </article>
+            <button id="play-all-button">Play All</button>
         </section>
 
     </main>
