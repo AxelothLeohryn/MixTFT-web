@@ -265,4 +265,7 @@ progress[value]::-webkit-progress-value {
     progress[value] {
         width: 50%
     }
+    #muteall {
+        width: 15vw;
+    }
 }
