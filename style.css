@@ -74,10 +74,15 @@ main {
     top: 0;
     background-color: #0A1428;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
+    gap: 100px;
 }
-
+#loading-text {
+    z-index: 5;
+    color: white;
+}
 .fa-spinner {
     z-index: 3;
     color: white;
