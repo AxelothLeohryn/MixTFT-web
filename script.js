@@ -19,10 +19,10 @@ function loadAudios() {
     track.addEventListener(
       "canplaythrough",
       function () {
-        console.log(`Audio ${index + 1} can play through.`);
+        // console.log(`Audio ${index + 1} can play through.`);
         loadedCount++;
         if (loadedCount === tracks.length) {
-          console.log("All audio files can play through.");
+          // console.log("All audio files can play through.");
           loadingSection.style.display = "none";
         }
       },
