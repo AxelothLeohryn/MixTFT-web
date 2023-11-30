@@ -79,10 +79,12 @@ main {
     justify-content: center;
     gap: 100px;
 }
+
 #loading-text {
     z-index: 5;
     color: white;
 }
+
 .fa-spinner {
     z-index: 3;
     color: white;
