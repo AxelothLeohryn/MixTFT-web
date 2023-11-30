@@ -242,7 +242,6 @@ progress:hover {
 }
 
 input[type="range"] {
-    color: red;
     width: 25%;
     cursor: pointer;
 }
