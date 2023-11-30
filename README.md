@@ -1,4 +1,6 @@
-# MixTFT-web
+# TFT MIX
+
+[Start mixing!](https://axelothleohryn.github.io/MixTFT-web/)
 
 Small test project, mix different audio tracks from the different bands of Teamfight Tactics (Set 10) from League of Legends. Mobile-first.
 
