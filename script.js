@@ -121,7 +121,7 @@ tracks.forEach((track, index) => {
       articles[index].style.backgroundColor = "#091224";
       progressBars[index].style.setProperty(
         "--progress-bg",
-        "grey"
+        "linear-gradient(90deg, #3C3C41, #5B5A56)"
       );
     } else {
       articles[index].style.backgroundColor = "#082c3e";

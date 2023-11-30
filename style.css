@@ -255,7 +255,7 @@ progress[value] {
     width: 25%;
     margin: 0 10px;
     border-radius: 10em;
-    background: rgb(146, 146, 146);
+    background: #1E2328;
     cursor: pointer;
 }
 
@@ -266,7 +266,7 @@ progress[value]::-webkit-progress-bar {
 
 progress[value]::-webkit-progress-value {
     border-radius: 10em;
-    background: var(--progress-bg, grey);
+    background: var(--progress-bg, linear-gradient(90deg, #3C3C41, #5B5A56));
     cursor: pointer;
 }
 
