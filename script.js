@@ -119,8 +119,16 @@ tracks.forEach((track, index) => {
   track.addEventListener("volumechange", () => {
     if (tracks[index].muted || tracks[index].volume === 0) {
       articles[index].style.backgroundColor = "#091224";
+      progressBars[index].style.setProperty(
+        "--progress-bg",
+        "grey"
+      );
     } else {
       articles[index].style.backgroundColor = "#082c3e";
+      progressBars[index].style.setProperty(
+        "--progress-bg",
+        "linear-gradient(90deg, #005A82, #0AC8B9)"
+      );
     }
   });
 });
