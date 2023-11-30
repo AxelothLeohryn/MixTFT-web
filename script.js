@@ -6,6 +6,7 @@ const articles = document.querySelectorAll("article");
 const icons = document.querySelectorAll("img");
 const check = document.getElementById("late-game-check");
 const loadingSection = document.getElementById("loading");
+const muteAll = document.getElementById("muteall");
 
 const early = document.getElementById("early-tracks");
 const late = document.getElementById("late-tracks");
@@ -15,19 +16,27 @@ function loadAudios() {
   let loadedCount = 0; // count of audios that have loaded
   tracks.forEach((track, index) => {
     // Listen for the 'canplaythrough' event which means the audio is ready to play
-    track.addEventListener('canplaythrough', function() {
-      console.log(`Audio ${index + 1} can play through.`);
-      loadedCount++;
-      if (loadedCount === tracks.length) {
-        console.log('All audio files can play through.');
-        loadingSection.style.display = 'none';
-      }
-    }, { once: true });
+    track.addEventListener(
+      "canplaythrough",
+      function () {
+        console.log(`Audio ${index + 1} can play through.`);
+        loadedCount++;
+        if (loadedCount === tracks.length) {
+          console.log("All audio files can play through.");
+          loadingSection.style.display = "none";
+        }
+      },
+      { once: true }
+    );
 
     // Listen for errors in loading the audio
-    track.addEventListener('error', function() {
-      console.error(`Error loading audio ${index + 1}.`);
-    }, { once: true });
+    track.addEventListener(
+      "error",
+      function () {
+        console.error(`Error loading audio ${index + 1}.`);
+      },
+      { once: true }
+    );
 
     // Attempt to load the audio file
     track.load();
@@ -35,7 +44,7 @@ function loadAudios() {
 }
 
 // Call loadAudios on page load
-window.addEventListener('load', loadAudios);
+window.addEventListener("load", loadAudios);
 
 function allAudiosLoaded() {
   const allLoaded = Array.from(tracks).every((track) => track.readyState >= 4);
@@ -51,8 +60,12 @@ tracks.forEach((track) => {
 check.addEventListener("change", (event) => {
   tracks.forEach((track) => {
     track.pause();
+    track.currentTime = 0;
     track.volume = 0;
     play.innerHTML = "Play All";
+  });
+  volumeControls.forEach((control, i) => {
+    control.value = 0;
   });
 
   event.preventDefault();
@@ -86,6 +99,15 @@ play.addEventListener("click", (event) => {
       track.pause();
       play.innerHTML = "Play All";
     }
+  });
+});
+muteAll.addEventListener("click", (event) => {
+  event.preventDefault();
+  tracks.forEach((track) => {
+    track.volume = 0;
+  });
+  volumeControls.forEach((control, i) => {
+    control.value = 0;
   });
 });
 

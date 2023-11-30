@@ -140,7 +140,7 @@ input:checked + .switch {
     padding: 15px;
     border-radius: 5px;
     margin: 5px;
-    width: 60vw;
+    width: 50vw;
     position: sticky;
     bottom: 5px;
     background-color: #4c4c58;
@@ -152,6 +152,19 @@ input:checked + .switch {
 #play-all-button:hover {
     background-color: #656574;
     transform: scale(1.01);
+}
+#muteall {
+    font-size: smaller;
+    padding: 10px;
+    border-radius: 5px;
+    width: 20vw;
+    height: 50px;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    background-color: #4c4c58;
+    color: #ffffff;
+    border: 3px solid #3fb8ca;
 }
 
 section {
@@ -236,7 +249,8 @@ progress[value]::-webkit-progress-value {
     }
 
     article {
-        height: 4vh;
+        height: 8vh;
+        width: 60%
     }
 
     img {
@@ -245,10 +259,10 @@ progress[value]::-webkit-progress-value {
     }
 
     input {
-        width: 10%
+        width: 10%;
     }
 
     progress[value] {
-        width: 40%
+        width: 50%
     }
 }
