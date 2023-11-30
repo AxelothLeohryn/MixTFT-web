@@ -10,39 +10,44 @@
 
 @keyframes slideInFromRight {
     0% {
-      transform: translateX(100%);
+        transform: translateX(100%);
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-  
-  @keyframes slideInFromLeft {
+}
+
+@keyframes slideInFromLeft {
     0% {
-      transform: translateX(-100%);
+        transform: translateX(-100%);
     }
+
     100% {
-      transform: translateX(0);
+        transform: translateX(0);
     }
-  }
-  
-  @keyframes slideInFromBottom {
+}
+
+@keyframes slideInFromBottom {
     0% {
-      transform: translateY(100%);
+        transform: translateY(100%);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
-  
-  @keyframes slideInFromTop {
+}
+
+@keyframes slideInFromTop {
     0% {
-      transform: translateY(-100%);
+        transform: translateY(-100%);
     }
+
     100% {
-      transform: translateY(0);
+        transform: translateY(0);
     }
-  }
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -72,17 +77,19 @@ main {
     align-items: center;
     justify-content: center;
 }
+
 .fa-spinner {
     z-index: 3;
     color: white;
 }
+
 .wraper {
     display: flex;
     flex-direction: row;
     gap: 1em;
     align-items: center;
     justify-content: space-between;
-    
+
 }
 
 .label-text {
@@ -123,12 +130,13 @@ main {
     transition: background 0.2s;
 }
 
-input:checked + .switch {
+input:checked+.switch {
     grid-template-columns: 1fr 1fr 0fr;
-  }
-  input:checked + .switch::after {
+}
+
+input:checked+.switch::after {
     background-color: #C89B3C;
-  }
+}
 
 #title {
     font-family: league;
@@ -144,15 +152,16 @@ input:checked + .switch {
     position: sticky;
     bottom: 5px;
     background-color: #4c4c58;
-    ;
     color: #ffffff;
     border: 3px solid #3fb8ca;
+    cursor: pointer;
 }
 
 #play-all-button:hover {
     background-color: #656574;
     transform: scale(1.01);
 }
+
 #muteall {
     font-size: smaller;
     padding: 10px;
@@ -165,6 +174,12 @@ input:checked + .switch {
     background-color: #4c4c58;
     color: #ffffff;
     border: 3px solid #3fb8ca;
+    cursor: pointer;
+}
+
+#muteall:hover {
+    background-color: #656574;
+    transform: scale(1.01);
 }
 
 section {
@@ -175,6 +190,7 @@ section {
     align-items: center;
     justify-content: center;
 }
+
 #late-tracks {
     animation: 0.3s ease-in 0s 1 slideInFromLeft;
     width: 100%;
@@ -183,6 +199,7 @@ section {
     align-items: center;
     justify-content: center;
 }
+
 article {
     margin: 5px 15px;
     padding: 10px;
@@ -220,6 +237,7 @@ progress:hover {
 input[type="range"] {
     color: red;
     width: 25%;
+    cursor: pointer;
 }
 
 progress[value] {
@@ -231,6 +249,7 @@ progress[value] {
     margin: 0 10px;
     border-radius: 10em;
     background: rgb(146, 146, 146);
+    cursor: pointer;
 }
 
 progress[value]::-webkit-progress-bar {
@@ -241,6 +260,7 @@ progress[value]::-webkit-progress-bar {
 progress[value]::-webkit-progress-value {
     border-radius: 10em;
     background: linear-gradient(90deg, #005A82, #0AC8B9);
+    cursor: pointer;
 }
 
 @media screen and (width > 768px) {
@@ -265,7 +285,9 @@ progress[value]::-webkit-progress-value {
     progress[value] {
         width: 50%
     }
+
     #muteall {
         width: 15vw;
+        left: 20px;
     }
 }
